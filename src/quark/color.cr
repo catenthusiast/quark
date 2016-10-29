@@ -1,5 +1,7 @@
 module Quark
   class Color
+    getter :red, :green, :blue
+
     def initialize(*, r : Int32, g : Int32, b : Int32)
       @red = r
       @green = g
@@ -32,6 +34,18 @@ module Quark
 
     def css_hsl
       "hsl(#{hsl[:hue]}, #{hsl[:saturation]}, #{hsl[:luminosity]})"
+    end
+
+    def hue
+      hsl[:hue]
+    end
+
+    def saturation
+      hsl[:saturation]
+    end
+
+    def luminosity
+      hsl[:luminosity]
     end
   end
 end
